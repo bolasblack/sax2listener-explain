@@ -1,5 +1,7 @@
 # SAX2Listener arguments explain
 
+Japanese document: http://docs.ruby-lang.org/ja/2.2.0/class/REXML=3a=3aSAX2Listener.html
+
 Result:
 
 ```
