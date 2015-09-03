@@ -36,24 +36,24 @@ parser = REXML::Parsers::SAX2Parser.new xml
 parser.listen(:attlistdecl) { |element, pairs, contents|
   puts "listen :attlistdecl element: \"#{text}\" pairs: \"#{pairs}\" contents: \"#{contents}\""
 }
-parser.listen(:cdata) { |contents|
-  puts "listen :cdata contents: \"#{contents}\""
-}
-parser.listen(:characters) { |text|
-  puts "listen :characters text: \"#{text}\""
-}
-parser.listen(:comment) { |comment|
-  puts "listen :comment comment: \"#{comment}\""
-}
+# parser.listen(:cdata) { |contents|
+#   puts "listen :cdata contents: \"#{contents}\""
+# }
+# parser.listen(:characters) { |text|
+#   puts "listen :characters text: \"#{text}\""
+# }
+# parser.listen(:comment) { |comment|
+#   puts "listen :comment comment: \"#{comment}\""
+# }
 parser.listen(:doctype) { |name, pub_sys, long_name, uri|
   puts "listen :doctype name: \"#{name}\" pub_sys: \"#{pub_sys}\" long_name: \"#{long_name}\" uri: \"#{uri}\""
 }
-parser.listen(:elementdecl) { |content|
-  puts "listen :elementdecl content: \"#{content}\""
-}
-parser.listen(:end_document) {
-  puts "listen :end_document"
-}
+# parser.listen(:elementdecl) { |content|
+#   puts "listen :elementdecl content: \"#{content}\""
+# }
+# parser.listen(:end_document) {
+#   puts "listen :end_document"
+# }
 parser.listen(:end_element) { |uri, localname, qname|
   puts "listen :end_element uri: \"#{uri}\" localname: \"#{localname}\" qname: \"#{qname}\""
 }
@@ -63,18 +63,18 @@ parser.listen(:end_prefix_mapping) { |prefix|
 parser.listen(:entitydecl) { |name, decl|
   puts "listen :entitydecl name: \"#{name}\" decl: \"#{decl}\""
 }
-parser.listen(:notationdecl) { |content|
-  puts "listen :notationdecl content: \"#{content}\""
-}
+# parser.listen(:notationdecl) { |content|
+#   puts "listen :notationdecl content: \"#{content}\""
+# }
 parser.listen(:processing_instruction) { |target, data|
   puts "listen :processing_instruction target: \"#{target}\" data: \"#{data}\""
 }
-parser.listen(:progress) { |position|
-  puts "listen :progress position: \"#{position}\""
-}
-parser.listen(:start_document) {
-  puts "listen :start_document"
-}
+# parser.listen(:progress) { |position|
+#   puts "listen :progress position: \"#{position}\""
+# }
+# parser.listen(:start_document) {
+#   puts "listen :start_document"
+# }
 parser.listen(:start_element) { |uri, localname, qname, attributes|
   puts "listen :start_element uri: \"#{uri}\" localname: \"#{localname}\" qname: \"#{qname}\" attributes: \"#{attributes}\""
 }
